@@ -149,7 +149,7 @@ button:hover {
 
 .fondo-galery {
     background-image: url('../assets/fondo-galeria.png'); 
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -165,6 +165,20 @@ button:hover {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.fondo-about{
+    background-image: url(../assets/fondo-aboutme.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.form{
+    background-color: black;
+    color: white;
 }
 
 .wap-logo img {
