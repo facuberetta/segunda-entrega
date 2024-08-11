@@ -12,22 +12,22 @@ img {
     height: auto;
 }  
 
+
+
 .fondo-home {
-    background-image: url('../assets/fondo-home.jpg');
-    background-size: cover;
+    background-image: url("../assets/Epecuen-42.jpg");
+    background-size: 100vw 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
 
-.fondo-home {
-    background-image: url("../assets/Epecuen-42.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 
 
 header, main {
@@ -48,7 +48,7 @@ footer {
 }
 
 h1 {
-    color: white;
+    color: white !important;
     text-align: center;
     font-size: 100px;
 }
@@ -143,40 +143,53 @@ button:hover {
 
 .fondo-info {
     background-image: url('../assets/fondo-info.jpg'); 
-    background-size: cover;
+    background-size: 100vw 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
 
 .fondo-galery {
-        background-image: url("../assets/fondo-galeria.png");
-        background-size:cover;
-        background-position: center; 
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
+    background-image: url("../assets/fondo-galeria.jpeg");
+    background-size: 100vw 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .fondo-contact {
     background-image: url('../assets/fondo-contact.jpg'); 
-    background-size: cover;
+    background-size: 100vw 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
 
 .fondo-about{
     background-image: url(../assets/fondo-aboutme.jpg);
-    background-size: cover;
+    background-size: 100vw 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -299,21 +312,15 @@ form{
     border-radius: 5px;
 }
 
-.category-eventos img {
-    width: 25rem;
-    height: 15.625rem;
-    object-fit: cover;
-    border-radius: 5px;
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#futbol:target ~ .gallery .futbol,
-#ciclismo:target ~ .gallery .ciclismo,
-#paisajes:target ~ .gallery .paisajes,
-#eventos:target ~ .gallery .eventos,
-#all:target ~ .gallery .category {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.social-media-container img {
+    max-width: 100px;
+    margin: 20px;
 }
 
 .wap-logo img {
@@ -335,7 +342,7 @@ form{
     height: auto;
 }
 
-/* Estilo general para el contenedor principal */
+
 .main-about {
     max-width: 800px;
     margin: 0 auto;
@@ -346,7 +353,7 @@ form{
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-  /* Estilo para el título */
+
 .main-about h1 {
     font-size: 2.5rem;
     color: #333;
@@ -354,7 +361,7 @@ form{
     text-align: center;
 }
 
-  /* Estilo para cada sección */
+
 .main-about section {
     margin-bottom: 20px;
     padding: 15px;
@@ -365,13 +372,13 @@ form{
     color: #555;
 }
 
-  /* Estilo para el texto dentro de las secciones */
+
 .main-about section p {
     margin: 0;
     font-size: 1rem;
 }
 
-  /* Estilo adicional para un mejor diseño responsive */
+
 @media (max-width: 600px) {
     .main-about {
 padding: 15px;
@@ -386,3 +393,52 @@ padding: 15px;
     }
 }
 
+.calendario h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.calendario {
+    background-color: lightgray;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.7;
+}
+
+.calendario {
+    text-align: center;
+}
+
+
+.calendario table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendario th, .calendario td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.calendario th {
+    background-color: #f0f0f0;
+}
+
+.calendario td {
+    background-color: #fff;
+}
+
+.calendario td:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+.carousel-item img {
+    width: 400px; /* ancho fijo */
+    height: 500px; /* alto fijo */
+    object-fit: cover;
+    opacity: 0.9;
+}
