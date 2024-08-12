@@ -12,7 +12,8 @@ img {
     height: auto;
 }  
 
-
+header {
+    height: 80vh;  }
 
 .fondo-home {
     background-image: url("../assets/Epecuen-42.jpg");
@@ -465,5 +466,35 @@ padding: 15px;
     100% {
     opacity: 1;
     transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .header {
+    height: 60vh;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 812px) {
+    .header {
+height: 70vh;
+    }
+}
+
+@media (min-width: 744px) and (max-width: 1133px) {
+    .header {
+height: 70vh;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+    height: 80vh;
     }
 }
