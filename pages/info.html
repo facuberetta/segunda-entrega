@@ -27,15 +27,18 @@
 
     <main>
         <h1>Info</h1>
-        <div class="calendario container d-flex justify-content-center"></div>
-        <div class="calendario container">
+        <div class="calendar-container">
+        <div class="calendar-header">
             <h2 class="text-center">Calendario</h2>
             <ul class="nav nav-tabs">
-                <li><a href="#enero" data-bs-toggle="tab">Enero</a></li>
-                <li><a href="#febrero" data-bs-toggle="tab">Febrero</a></li>
-                <li><a href="#marzo" data-bs-toggle="tab">Marzo</a></li>
-            </ul> <div class="tab-content">
-            <div class="tab-pane" id="enero">
+            <li><a href="#enero" data-bs-toggle="tab">Enero</a></li>
+            <li><a href="#febrero" data-bs-toggle="tab">Febrero</a></li>
+            <li><a href="#marzo" data-bs-toggle="tab">Marzo</a></li>
+            </ul>
+        </div>
+        <div class="calendar-content">
+            <div class="tab-content">
+                <div class="tab-pane" id="enero">
                 <div class="row">
                 <div class="col-md-7">
                     <table class="table table-bordered">
@@ -213,10 +216,10 @@
                 </div>
                 </div>
             </div>
-            </div>
-        </div>    
+        </div>
+    </div>
     </main>
-
+    
     <footer class="fondo">
         <section class="contact">
             <p>Alvaro Gonzalez Fotografía</p>
