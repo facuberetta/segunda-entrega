@@ -1,115 +1,109 @@
-body, html {
+* {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
   box-sizing: border-box; }
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif; }
 
 img {
   max-width: 100%;
   height: auto; }
 
-.header {
+header {
+  height: 80vh;
   padding: 20px;
   width: 100%;
   margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-
-.header nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-
-.header nav ul li {
-  margin: 0 10px; }
-
-.header nav ul li a {
-  text-decoration: none;
-  color: #007BFF;
-  font-weight: bold;
-  transition: color 0.3s ease; }
-
-.header nav ul li a:hover {
-  color: #0056b3; }
-
-.fondo {
-  /* Footer styling */
-  /* Responsive design */ }
-  .fondo-home {
-    background-image: url("../assets/Epecuen-42.jpg");
-    background-size: 100vw 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  header nav ul {
+    list-style-type: none;
+    padding: 0;
     display: flex;
-    flex-direction: column; }
-    
-  .fondo-info {
-    background-image: url("../assets/fondo-info.jpg");
-    background-size: 100vw 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column; }
-  .fondo .calendar-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px; }
-  .fondo .calendar-header {
-    background-color: #f7f7f7;
-    padding: 10px;
-    border-bottom: 1px solid #ddd; }
-  .fondo .calendar-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px; }
-  .fondo .tab-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px; }
-  .fondo table {
-    width: 100%;
-    border-collapse: collapse; }
-    .fondo table th, .fondo table td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: center; }
-  .fondo footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center; }
-  @media (max-width: 768px) {
-    .fondo .calendar-container {
-      grid-template-columns: 1fr; }
-    .fondo .calendar-content {
-      grid-template-columns: 1fr; } }
+    justify-content: space-around;
+    align-items: center; }
+    header nav ul li {
+      margin: 0 10px; }
+      header nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s ease; }
+        header nav ul li a:hover {
+          color: #007BFF; }
+  header .nav-logo img {
+    width: 6.25rem;
+    height: auto; }
 
-.footer {
+main, footer {
+  padding: 20px;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+
+footer {
   background-color: #c1c3be;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: auto; }
+  footer .contact, footer section {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; }
+  footer ul {
+    list-style-type: none;
+    color: white;
+    padding: 0;
+    display: flex;
+    justify-content: center; }
+    footer ul li {
+      margin: 0 10px;
+      padding: auto; }
+      footer ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s ease; }
+        footer ul li a:hover {
+          color: #007BFF; }
+  footer .footer-logo img {
+    width: 6.25rem;
+    height: auto; }
 
-h1 {
-  color: white !important;
-  text-align: center;
-  font-size: 100px; }
+.fondo-home, .fondo-info, .fondo-galery, .fondo-contact, .fondo-about {
+  background-size: 100vw 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column; }
+
+.fondo-home {
+  background-image: url("../assets/Epecuen-42.jpg"); }
+
+.fondo-info {
+  background-image: url("../assets/fondo-info.jpg"); }
+
+.fondo-galery {
+  background-image: url("../assets/fondo-galeria.jpeg"); }
+
+.fondo-contact {
+  background-image: url("../assets/fondo-contact.jpg"); }
+
+.fondo-about {
+  background-image: url(../assets/fondo-aboutme.jpg); }
+
+form {
+  background-color: black;
+  color: white; }
 
 .contact-form {
   max-width: 500px;
@@ -119,31 +113,54 @@ h1 {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif; }
+  .contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold; }
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; }
+  .contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer; }
+    .contact-form button:hover {
+      background-color: #0056b3; }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); }
+  .contact-form textarea {
+    min-height: 100px;
+    resize: vertical; }
 
-.contact-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold; }
+.categories {
+  margin: 20px 0; }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  box-sizing: border-box; }
-
-.contact-form button {
+.category-link {
   padding: 10px 20px;
-  border: none;
+  margin: 0 10px;
+  text-decoration: none;
   background-color: #007BFF;
-  color: black;
+  color: #0a0303;
+  font-size: 16px;
   border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer; }
+  display: inline-block; }
+  .category-link:hover {
+    background-color: #0056b3; }
 
 .gallery {
   display: flex;
@@ -151,22 +168,31 @@ h1 {
   justify-content: center;
   gap: 10px;
   padding: 20px; }
-  .gallery img {
-    width: 25rem;
-    height: 15.625rem;
-    object-fit: cover;
-    border-radius: 5px; }
 
 .category {
   display: none; }
+
+.category-futbol img,
+.category-ciclismo img,
+.category-paisajes img {
+  width: 25rem;
+  height: 15.625rem;
+  object-fit: cover;
+  border-radius: 5px; }
 
 .social-media-container {
   display: flex;
   justify-content: center;
   align-items: center; }
-
-img {
-  max-width: 100px; }
+  .social-media-container img {
+    max-width: 100px;
+    margin: 20px; }
+  .social-media-container .wap-logo img,
+  .social-media-container .insta-logo img {
+    width: 100px;
+    height: auto;
+    display: flex;
+    align-items: center; }
 
 .main-about {
   max-width: 800px;
@@ -175,23 +201,101 @@ img {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); }
+  .main-about h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; }
+  .main-about section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+    color: #555; }
+    .main-about section p {
+      margin: 0;
+      font-size: 1rem; }
 
-.about-section:hover {
-  background-color: white;
-  transform: scale(1.05); }
-
-.about-section h2 {
-  background-color: #007BFF;
-  padding: 10px;
+.calendario {
+  background-color: lightgray;
+  padding: 20px;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: #fff; }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+  text-align: center; }
+  .calendario h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px; }
+  .calendario table {
+    width: 100%;
+    border-collapse: collapse; }
+    .calendario table th, .calendario table td {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #ddd; }
+    .calendario table th {
+      background-color: #f0f0f0; }
+    .calendario table td {
+      background-color: #fff; }
+      .calendario table td:hover {
+        background-color: #f5f5f5;
+        cursor: pointer; }
 
-.about-section + .about-section {
-  margin-top: 40px; }
+.carousel-inner {
+  width: 800px;
+  height: 600px;
+  overflow: hidden; }
 
-h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: auto; }
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: carousel-item-animation 10s infinite;
+  animation-delay: calc(10s * (var(--index) - 1)); }
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+@keyframes carousel-item-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@media (max-width: 768px) {
+  header, main, footer {
+    width: 95%; }
+  header nav ul {
+    flex-direction: column; }
+    header nav ul li {
+      margin: 10px 0; }
+  .header {
+    height: 60vh; } }
+
+@media (min-width: 375px) and (max-width: 812px) {
+  .header {
+    height: 70vh; } }
+
+@media (min-width: 744px) and (max-width: 1133px) {
+  .header {
+    height: 70vh; } }
+
+@media (min-width: 1200px) {
+  .header {
+    height: 80vh; } }
+
+@media (max-width: 600px) {
+  .main-about {
+    padding: 15px; }
+    .main-about h1 {
+      font-size: 2rem; }
+    .main-about section {
+      padding: 10px; } }

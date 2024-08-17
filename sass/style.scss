@@ -2,35 +2,20 @@
 
 $primary-color: #007BFF;
 $secondary-color: #0056b3;
-$background-color: #f4f4f4;
-$text-color: #333;
-$border-radius: 10px;
-$box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$background-color: rgb(193, 195, 190);
+$font-color: white;
+$font-family: Arial, sans-serif;
 
-@mixin button-styles {
-padding: 10px 20px;
-border: none;
-background-color: $primary-color;
-color: black;
-border-radius: 5px;
-font-size: 18px;
-cursor: pointer;
-}
-
-@mixin header-styles {
-padding: 20px;
-width: 100%;
-margin: 20px auto;
-border-radius: $border-radius;
-box-shadow: $box-shadow;
+// Global Styles
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body, html {
-margin: 0;
-padding: 0;
 height: 100%;
-font-family: Arial, sans-serif;
-box-sizing: border-box;
+font-family: $font-family;
 }
 
 img {
@@ -38,248 +23,410 @@ max-width: 100%;
 height: auto;
 }
 
-// Header
-.header {
-@include header-styles;
-}
-
-// Nav
-.header nav ul {
-list-style-type: none;
-padding: 0;
-display: flex;
-justify-content: space-around;
-align-items: center;
-}
-
-.header nav ul li {
-margin: 0 10px;
-}
-
-.header nav ul li a {
-text-decoration: none;
-color: $primary-color;
-font-weight: bold;
-transition: color 0.3s ease;
-}
-
-.header nav ul li a:hover {
-color: $secondary-color;
-}
-
-// Fondo
-.fondo {
-&-home {
-    background-image: url("../assets/Epecuen-42.jpg");
-    background-size: 100vw 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-}
-&-info {
-    background-image: url("../assets/fondo-info.jpg");
-    background-size: 100vw 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-$grid-gap: 20px;
-$calendar-width: 800px;
-
-.calendar-container {
-display: grid;
-grid-template-columns: 1fr;
-grid-gap: $grid-gap;
-max-width: $calendar-width;
-margin: 0 auto;
+// Header Styles
+header {
+height: 80vh;
 padding: 20px;
-}
-
-.calendar-header {
-background-color: #f7f7f7;
-padding: 10px;
-border-bottom: 1px solid #ddd;
-}
-
-.calendar-content {
-display: grid;
-grid-template-columns: 1fr;
-grid-gap: $grid-gap;
-}
-
-.tab-content {
-display: grid;
-grid-template-columns: 1fr;
-grid-gap: $grid-gap;
-}
-
-table {
 width: 100%;
-border-collapse: collapse;
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+margin: 20px auto;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+nav {
+    ul {
+        list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+        margin: 0 10px;
+
+        a {
+        text-decoration: none;
+        color: $font-color;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $primary-color;
+        }
+        }
+    }
+    }
+}
+
+.nav-logo img {
+    width: 6.25rem;
+    height: auto;
 }
 }
 
-/* Footer styling */
-footer {
-background-color: #333;
-color: #fff;
+// Main and Section Styles
+main, footer {
 padding: 20px;
-text-align: center;
+width: 100%;
+margin: 20px auto;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-.calendar-container {
-    grid-template-columns: 1fr;
-}
-.calendar-content {
-    grid-template-columns: 1fr;
-}
-}
-
-}
-
-// Footer
-.footer {
-background-color: rgb(193, 195, 190);
+footer {
+background-color: $background-color;
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 width: 100%;
 height: auto;
+
+.contact, section {
+    text-align: center;
+    margin-bottom: 20px;
+    color: $font-color;
 }
 
-// Typography
-h1 {
-color: white !important;
-text-align: center;
-font-size: 100px;
+ul {
+    list-style-type: none;
+    color: $font-color;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+    margin: 0 10px;
+    padding: auto;
+
+    a {
+        text-decoration: none;
+        color: $font-color;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        &:hover {
+        color: $primary-color;
+        }
+    }
+    }
 }
 
-// Contact Form
+.footer-logo img {
+    width: 6.25rem;
+    height: auto;
+}
+}
+
+// Fondo Styles
+.fondo-home, .fondo-info, .fondo-galery, .fondo-contact, .fondo-about {
+background-size: 100vw 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+height: 100vh;
+width: 100vw;
+overflow-x: hidden;
+display: flex;
+flex-direction: column;
+}
+
+.fondo-home {
+background-image: url("../assets/Epecuen-42.jpg");
+}
+
+.fondo-info {
+background-image: url('../assets/fondo-info.jpg');
+}
+
+.fondo-galery {
+background-image: url("../assets/fondo-galeria.jpeg");
+}
+
+.fondo-contact {
+background-image: url('../assets/fondo-contact.jpg');
+}
+
+.fondo-about {
+background-image: url(../assets/fondo-aboutme.jpg);
+}
+
+// Form Styles
+form {
+background-color: black;
+color: $font-color;
+}
+
+// Contact Form Styles
 .contact-form {
 max-width: 500px;
 margin: 0 auto;
 padding: 20px;
 background-color: #170562;
-border-radius: $border-radius;
-box-shadow: $box-shadow;
-font-family: Arial, sans-serif;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+font-family: $font-family;
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-.contact-form label {
-display: block;
-margin-bottom: 8px;
-font-weight: bold;
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-width: 100%;
-padding: 10px;
-margin-bottom: 15px;
-border: 1px solid #ccc;
-border-radius: 5px;
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: $primary-color;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+    background-color: $secondary-color;
+    }
+}
+
+input:focus,
+textarea:focus {
+    border-color: $primary-color;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+}
+
+// Category and Gallery Styles
+.categories {
+margin: 20px 0;
+}
+
+.category-link {
+padding: 10px 20px;
+margin: 0 10px;
+text-decoration: none;
+background-color: $primary-color;
+color: rgb(10, 3, 3);
 font-size: 16px;
-box-sizing: border-box;
+border-radius: 5px;
+display: inline-block;
+
+&:hover {
+    background-color: $secondary-color;
+}
 }
 
-.contact-form button {
-@include button-styles;
-}
-
-// Gallery
 .gallery {
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 gap: 10px;
 padding: 20px;
-
-& img {
-    width: 25rem;
-    height: 15.625rem;
-    object-fit: cover;
-    border-radius: 5px;
-}
 }
 
 .category {
 display: none;
 }
 
-// Social Media
+.category-futbol img,
+.category-ciclismo img,
+.category-paisajes img {
+width: 25rem;
+height: 15.625rem;
+object-fit: cover;
+border-radius: 5px;
+}
+
+// Social Media Container Styles
 .social-media-container {
 display: flex;
 justify-content: center;
-align-items: center;  }
+align-items: center;
 
 img {
-    max-width: 100px  }
-// About
+    max-width: 100px;
+    margin: 20px;
+}
+
+.wap-logo img,
+.insta-logo img {
+    width: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+}
+
+// Main About Styles
 .main-about {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: $background-color;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
-}
-
-
-$border-color: #ddd;
-$padding: 20px;
-$margin-bottom: 20px;
-
-
-@mixin section-styles {
-    background-color: $background-color;
-    padding: $padding;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-    margin-bottom: $margin-bottom;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-
-.about-section:hover {
-    background-color: lighten($background-color, 10%);
-    transform: scale(1.05);
-}
-
-.about-section h2 {
-    background-color: $primary-color;
-    padding: 10px;
-    border-radius: $border-radius;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #fff;
-}
-
-.about-section + .about-section {
-    margin-top: 40px;
-}
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+font-family: $font-family;
+background-color: #f4f4f4;
+border-radius: 10px;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
 h1 {
     font-size: 2.5rem;
-    color: $text-color;
-    margin-bottom: auto;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+    color: #555;
+
+    p {
+    margin: 0;
+    font-size: 1rem;
+    }
+}
+}
+
+// Calendario Styles
+.calendario {
+background-color: lightgray;
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+opacity: 0.7;
+text-align: center;
+
+h2 {
+    color: $font-color;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    }
+
+    th {
+    background-color: #f0f0f0;
+    }
+
+    td {
+    background-color: #fff;
+
+    &:hover {
+        background-color: #f5f5f5;
+        cursor: pointer;
+    }
+    }
+}
+}
+
+// Carousel Styles
+.carousel-inner {
+width: 800px;
+height: 600px;
+overflow: hidden;
+}
+
+.carousel-item {
+width: 100%;
+height: 100%;
+object-fit: cover;
+animation: carousel-item-animation 10s infinite;
+  animation-delay: calc(10s * (var(--index) - 1));
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+}
+
+// Keyframes
+@keyframes carousel-item-animation {
+0% {
+    opacity: 0;
+    transform: translateX(100%);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+// Media Queries
+@media (max-width: 768px) {
+header, main, footer {
+    width: 95%;
+}
+
+header nav ul {
+    flex-direction: column;
+
+    li {
+    margin: 10px 0;
+    }
+}
+
+.header {
+    height: 60vh;
+}
+}
+
+@media (min-width: 375px) and (max-width: 812px) {
+.header {
+    height: 70vh;
+}
+}
+
+@media (min-width: 744px) and (max-width: 1133px) {
+.header {
+    height: 70vh;
+}
+}
+
+@media (min-width: 1200px) {
+.header {
+    height: 80vh;
+}
+}
+
+@media (max-width: 600px) {
+.main-about {
+    padding: 15px;
+
+    h1 {
+    font-size: 2rem;
+    }
+
+    section {
+    padding: 10px;
+    }
+}
+}
