@@ -6,7 +6,7 @@ $background-color: rgb(193, 195, 190);
 $font-color: white;
 $font-family: Arial, sans-serif;
 
-// Global Styles
+
 * {
 margin: 0;
 padding: 0;
@@ -23,7 +23,7 @@ max-width: 100%;
 height: auto;
 }
 
-// Header Styles
+
 header {
 height: 80vh;
 padding: 20px;
@@ -63,13 +63,23 @@ nav {
 }
 }
 
-// Main and Section Styles
+
 main, footer {
 padding: 20px;
 width: 100%;
 margin: 20px auto;
 border-radius: 8px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+.titu-info{
+    color: white;
+    text-align: center;
+    justify-content: center;
 }
 
 footer {
@@ -116,7 +126,7 @@ ul {
 }
 }
 
-// Fondo Styles
+
 .fondo-home, .fondo-info, .fondo-galery, .fondo-contact, .fondo-about {
 background-size: 100vw 100vh;
 background-position: center;
@@ -149,13 +159,13 @@ background-image: url('../assets/fondo-contact.jpg');
 background-image: url(../assets/fondo-aboutme.jpg);
 }
 
-// Form Styles
+
 form {
 background-color: black;
 color: $font-color;
 }
 
-// Contact Form Styles
+
 .contact-form {
 max-width: 500px;
 margin: 0 auto;
@@ -211,7 +221,7 @@ textarea {
 }
 }
 
-// Category and Gallery Styles
+
 .categories {
 margin: 20px 0;
 }
@@ -252,7 +262,7 @@ object-fit: cover;
 border-radius: 5px;
 }
 
-// Social Media Container Styles
+
 .social-media-container {
 display: flex;
 justify-content: center;
@@ -272,7 +282,7 @@ img {
 }
 }
 
-// Main About Styles
+
 .main-about {
 max-width: 800px;
 margin: 0 auto;
@@ -305,7 +315,7 @@ section {
 }
 }
 
-// Calendario Styles
+
 .calendario {
 background-color: lightgray;
 padding: 20px;
@@ -347,7 +357,7 @@ table {
 }
 }
 
-// Carousel Styles
+
 .carousel-inner {
 width: 800px;
 height: 600px;
@@ -368,7 +378,7 @@ img {
 }
 }
 
-// Keyframes
+
 @keyframes carousel-item-animation {
 0% {
     opacity: 0;
@@ -380,7 +390,7 @@ img {
 }
 }
 
-// Media Queries
+
 @media (max-width: 768px) {
 header, main, footer {
     width: 95%;

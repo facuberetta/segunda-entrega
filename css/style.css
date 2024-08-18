@@ -44,6 +44,15 @@ main, footer {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
 
+h1 {
+  color: white;
+  text-align: center; }
+
+.titu-info {
+  color: white;
+  text-align: center;
+  justify-content: center; }
+
 footer {
   background-color: #c1c3be;
   background-size: cover;
