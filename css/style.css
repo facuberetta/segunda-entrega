@@ -53,6 +53,44 @@ h1 {
   text-align: center;
   justify-content: center; }
 
+.color .color2 .color-3 .color-im {
+  margin: auto;
+  padding: 1.25rem; }
+
+.color {
+  color: black;
+  background-color: bisque;
+  opacity: 0.7;
+  text-align: justify; }
+
+.color2 {
+  color: black;
+  background-color: #e0a45a;
+  opacity: 0.7;
+  text-align: right;
+  display: flex;
+  display: grid; }
+
+.color2 ul li {
+  list-style: none;
+  text-align: right;
+  display: flex;
+  display: grid; }
+
+.color-im {
+  display: flexbox;
+  border: black;
+  color: black;
+  text-align: center; }
+
+.color-im img {
+  width: 100%;
+  height: 100%; }
+
+.color-im img {
+  width: 31.25rem;
+  height: 28.75rem; }
+
 footer {
   background-color: #c1c3be;
   background-size: cover;
@@ -96,7 +134,7 @@ footer {
   flex-direction: column; }
 
 .fondo-home {
-  background-image: url("../assets/Epecuen-42.jpg"); }
+  background-color: lightgray; }
 
 .fondo-info {
   background-image: url("../assets/fondo-info.jpg"); }
@@ -227,6 +265,12 @@ form {
     .main-about section p {
       margin: 0;
       font-size: 1rem; }
+
+.parrafos {
+  background-color: lightblue;
+  margin: 0;
+  padding: 0;
+  text-align: justify; }
 
 .calendario {
   background-color: lightgray;
