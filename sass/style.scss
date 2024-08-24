@@ -323,6 +323,16 @@ img {
 }
 }
 
+.carousel-inner {
+    height: 500px; /* Ajusta la altura según lo necesites */
+}
+
+.carousel-inner img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 
 .main-about {
 max-width: 800px;
